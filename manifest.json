@@ -1,0 +1,30 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/eui/eui.js",
+		"libs/modules/assetsmanager/assetsmanager.js",
+		"libs/modules/game/game.js",
+		"libs/modules/tween/tween.js",
+		"libs/modules/promise/promise.js",
+		"libs/physics/physics.js"
+	],
+	"game": [
+		"bin-debug/P2Sprite.js",
+		"bin-debug/P2World.js",
+		"bin-debug/CarFactory.js",
+		"bin-debug/CarGame.js",
+		"bin-debug/Entity.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/Main.js",
+		"bin-debug/AssetAdapter.js",
+		"bin-debug/Car.js",
+		"bin-debug/Platform.js",
+		"bin-debug/RoadData.js",
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/Tools.js",
+		"bin-debug/dispatch/Dispatch.js",
+		"bin-debug/dispatch/DispatchItemData.js",
+		"bin-debug/json/CarJson_json.js"
+	]
+}

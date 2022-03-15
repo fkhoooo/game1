@@ -1,0 +1,25 @@
+{
+	"groups": [
+		{
+			"keys": "car_json",
+			"name": "preload"
+		},
+		{
+			"keys": "carJson_json",
+			"name": "preloadJson"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/car.json",
+			"type": "sheet",
+			"name": "car_json",
+			"subkeys": "1,2"
+		},
+		{
+			"url": "json/carJson.json",
+			"type": "json",
+			"name": "carJson_json"
+		}
+	]
+}
