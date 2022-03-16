@@ -1,11 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "car_json,carJson_json",
+			"keys": "car_json",
 			"name": "preload"
 		},
 		{
-			"keys": "carJson_json,jsonData_bin",
+			"keys": "carJson_json",
 			"name": "preloadJson"
 		}
 	],
@@ -17,19 +17,9 @@
 			"subkeys": "1,2"
 		},
 		{
-			"url": "json/xlxs/car.xlsx",
-			"type": "bin",
-			"name": "car_xlsx"
-		},
-		{
 			"url": "json/carJson.json",
 			"type": "json",
 			"name": "carJson_json"
-		},
-		{
-			"url": "jsonData.bin",
-			"type": "bin",
-			"name": "jsonData_bin"
 		}
 	]
 }

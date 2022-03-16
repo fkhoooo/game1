@@ -42,3 +42,4 @@ var Car = (function (_super) {
     return Car;
 }(P2Sprite));
 __reflect(Car.prototype, "Car");
+//# sourceMappingURL=Car.js.map

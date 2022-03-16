@@ -15,3 +15,4 @@ var DispatchItemData = (function () {
     return DispatchItemData;
 }());
 __reflect(DispatchItemData.prototype, "DispatchItemData");
+//# sourceMappingURL=DispatchItemData.js.map

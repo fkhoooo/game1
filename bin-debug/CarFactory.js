@@ -47,3 +47,4 @@ var CarFactory = (function () {
     return CarFactory;
 }());
 __reflect(CarFactory.prototype, "CarFactory");
+//# sourceMappingURL=CarFactory.js.map

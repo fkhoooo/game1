@@ -25,3 +25,4 @@ var P2Sprite = (function () {
     return P2Sprite;
 }());
 __reflect(P2Sprite.prototype, "P2Sprite");
+//# sourceMappingURL=P2Sprite.js.map

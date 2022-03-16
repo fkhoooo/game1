@@ -111,3 +111,4 @@ var Entity = (function (_super) {
     return Entity;
 }(egret.DisplayObjectContainer));
 __reflect(Entity.prototype, "Entity");
+//# sourceMappingURL=Entity.js.map

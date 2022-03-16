@@ -44,18 +44,34 @@ class Main extends egret.DisplayObjectContainer {
             await RES.loadGroup("preloadJson", 0, loadingView);
             this.stage.removeChild(loadingView);
             let jsonList = RES.getGroupByName("preloadJson");
+            let zip:JSZip = new JSZip(RES.getRes("jsonData_bin"));
+            //解压打包的json 在解析
+           /* for(let key in  zip["files"])
+            {
+                let jsonName:string = key
+                let className:string = jsonName.charAt(0).toUpperCase() + jsonName.slice(1); 
+                className = className.replace(".json","_json");
+                let item:any = egret.getDefinitionByName(className);
+                let data = zip.file(jsonName);
+                zip.remove(jsonName);
+                if(data)
+                {   
+                    item && item.decodeJson(JSON.parse(data.asText()))  
+                }
+            }*/
+
+            //直接解析
             for(let i:number = 0; i < jsonList.length; i++)
             {   
                 let jsonName:string = jsonList[i].name;
+                if(jsonName == "jsonData_bin") continue;
                 let className:string = jsonName.charAt(0).toUpperCase() + jsonName.slice(1); 
                 let item:any = egret.getDefinitionByName(className);
                 if(item)
                 {
                    item.decodeJson(RES.getRes(jsonName))   
                 }
-                  
-            } 
-            
+            }
         }
         catch (e) {
             console.error(e);

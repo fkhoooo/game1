@@ -66,7 +66,6 @@ var Main = (function (_super) {
                         return [4 /*yield*/, this.loadJson()];
                     case 2:
                         _a.sent();
-                        this.createGameScene();
                         return [2 /*return*/];
                 }
             });
@@ -100,7 +99,7 @@ var Main = (function (_super) {
     };
     Main.prototype.loadJson = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var loadingView, jsonList, i, jsonName, className, item, e_2;
+            var loadingView, jsonList, zip, i, jsonName, className, item, e_2;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
@@ -112,13 +111,29 @@ var Main = (function (_super) {
                         _a.sent();
                         this.stage.removeChild(loadingView);
                         jsonList = RES.getGroupByName("preloadJson");
+                        zip = new JSZip(RES.getRes("jsonData_bin"));
+                        //解压打包的json 在解析
+                        /* for(let key in  zip["files"])
+                         {
+                             let jsonName:string = key
+                             let className:string = jsonName.charAt(0).toUpperCase() + jsonName.slice(1);
+                             className = className.replace(".json","_json");
+                             let item:any = egret.getDefinitionByName(className);
+                             let data = zip.file(jsonName);
+                             zip.remove(jsonName);
+                             if(data)
+                             {
+                                 item && item.decodeJson(JSON.parse(data.asText()))
+                             }
+                         }*/
                         for (i = 0; i < jsonList.length; i++) {
                             jsonName = jsonList[i].name;
+                            if (jsonName == "jsonData_bin")
+                                continue;
                             className = jsonName.charAt(0).toUpperCase() + jsonName.slice(1);
-                            console.log(className);
                             item = egret.getDefinitionByName(className);
                             if (item) {
-                                egret.getDefinitionByName(className).decodeJson(RES.getRes(jsonName));
+                                item.decodeJson(RES.getRes(jsonName));
                             }
                         }
                         return [3 /*break*/, 3];
@@ -141,3 +156,4 @@ var Main = (function (_super) {
     return Main;
 }(egret.DisplayObjectContainer));
 __reflect(Main.prototype, "Main");
+//# sourceMappingURL=Main.js.map

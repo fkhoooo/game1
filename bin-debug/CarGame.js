@@ -51,3 +51,4 @@ var CarGame = (function (_super) {
     return CarGame;
 }(egret.DisplayObjectContainer));
 __reflect(CarGame.prototype, "CarGame");
+//# sourceMappingURL=CarGame.js.map

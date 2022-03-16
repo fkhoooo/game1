@@ -21,3 +21,4 @@ var RoadData = (function () {
     return RoadData;
 }());
 __reflect(RoadData.prototype, "RoadData");
+//# sourceMappingURL=RoadData.js.map
