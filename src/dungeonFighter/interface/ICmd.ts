@@ -1,0 +1,5 @@
+interface ICmd 
+{	
+	execute();
+	exit();
+}

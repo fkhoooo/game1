@@ -3,6 +3,7 @@ class Main extends egret.DisplayObjectContainer {
 
     public static stageWidth:number;
     public static stageHeight:number;
+    public static stage:egret.Stage
     public constructor()
     {
         super();
@@ -16,6 +17,8 @@ class Main extends egret.DisplayObjectContainer {
         Main.stageHeight = egret.MainContext.instance.stage.stageHeight;
         let wrd:p2.World = new p2.World();
         this.runGame()
+
+        Main.stage = this.stage;
     }
 
     private async runGame() {
@@ -83,7 +86,7 @@ class Main extends egret.DisplayObjectContainer {
      */
     protected createGameScene(): void
     {
-        this.stage.addChild(new CarGame())
+        this.stage.addChild(new DungeonFighter())
     }
    
 }

@@ -55,6 +55,7 @@ var Main = (function (_super) {
         Main.stageHeight = egret.MainContext.instance.stage.stageHeight;
         var wrd = new p2.World();
         this.runGame();
+        Main.stage = this.stage;
     };
     Main.prototype.runGame = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -66,6 +67,7 @@ var Main = (function (_super) {
                         return [4 /*yield*/, this.loadJson()];
                     case 2:
                         _a.sent();
+                        this.createGameScene();
                         return [2 /*return*/];
                 }
             });
@@ -126,6 +128,7 @@ var Main = (function (_super) {
                                  item && item.decodeJson(JSON.parse(data.asText()))
                              }
                          }*/
+                        //直接解析
                         for (i = 0; i < jsonList.length; i++) {
                             jsonName = jsonList[i].name;
                             if (jsonName == "jsonData_bin")
@@ -151,7 +154,7 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.createGameScene = function () {
-        this.stage.addChild(new CarGame());
+        this.stage.addChild(new DungeonFighter());
     };
     return Main;
 }(egret.DisplayObjectContainer));
